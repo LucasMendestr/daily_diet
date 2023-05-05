@@ -13,11 +13,10 @@ export function ConfirmationView() {
     const route = useRoute();
     const { isGoodDiet } = route.params as RouteParams;
     const navigation = useNavigation();
+    
     function handleHome() {
         navigation.navigate('home');
     }
-
-
 
     return (
         <Container>

@@ -3,7 +3,6 @@ import { Avatar, Container, Logo } from "./styles";
 import logoImg from '@assets/Logo.png'
 import avatar from '@assets/Ellipse.png'
 
-
 export function Header() {
     return (
         <Container>

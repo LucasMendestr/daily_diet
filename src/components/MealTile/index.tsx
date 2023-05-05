@@ -27,9 +27,9 @@ export function MealTile({ mealId, ...rest }: Props) {
     } catch (error) {
         Alert.alert('Error', 'Failed to load meal item');
     }
-}
+  }
 
-useEffect(() => {
+  useEffect(() => {
     loadMealItem();
   }, [mealId]);  
 

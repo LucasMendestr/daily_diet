@@ -20,6 +20,7 @@ import { ArrowIcon,
     TitleA,
     TitleB, 
 } from "./styles";
+import { mealDeleteById } from "@storage/meals/mealDelete";
 
 
 type RouteParams = {
@@ -39,23 +40,29 @@ export function MealView() {
     function handleEdit() {
         navigation.navigate('newMeal', {mealId});
     }
-
+    
     function handleDelete() {
-        Alert.alert(
-            "Título do Alert",
-            "Mensagem do Alert",
-            [
-              {
-                text: "Botão 1",
-                onPress: () => console.log("Botão 1 Pressionado"),
-              },
-              {
-                text: "Botão 2",
-                onPress: () => console.log("Botão 2 Pressionado"),
-              },
-            ],
-          );
+    Alert.alert(
+        "Deletar",
+        "Deseja realmente excluir o registro da refeição?",
+        [
+            {
+            text: "Cancelar",
+            onPress: () => {
+                return;
+            },
+            },
+            {
+            text: "Excluir",
+            onPress: () => {
+                mealDeleteById(mealId);
+                navigation.navigate('home');
+            },
+            },
+        ],
+    );
     }
+
     async function loadMealItem() {
         try {
             const mealDays = await mealsGetAll();

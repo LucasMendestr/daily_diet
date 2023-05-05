@@ -31,7 +31,6 @@ export const Title = styled.Text<Props>`
   margin-left: 10px;
 `;
 
-
 export const PlusIcon = styled(Plus).attrs<Props>(({ theme, isDisable }) => ({
   size: 24,
   color: isDisable ? theme.COLORS.GRAY_2 : theme.COLORS.WHITE,

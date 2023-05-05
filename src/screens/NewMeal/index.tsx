@@ -142,20 +142,6 @@ export function NewMeal() {
             text: 'Voltar',
             onPress: () => {return;}
           },
-          {
-            text: 'Fora da Dieta',
-            onPress: () =>{ 
-              setIsGoodDiet(false);
-              goToCreate();
-            }
-          },
-          {
-            text: 'Dentro da Diera',
-            onPress: () => {
-              setIsGoodDiet(true);
-              goToCreate();
-            }
-          }
         ]
       )
     } else {

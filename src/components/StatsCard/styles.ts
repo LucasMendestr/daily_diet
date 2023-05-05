@@ -14,14 +14,19 @@ export const Container = styled(TouchableOpacity)<Props>`
   background-color: ${({ theme, isGoodDiet }) => isGoodDiet ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
   border-radius: 6px;
   justify-content: center;
+  align-items: center;
 `;
-
 
 export const ArrowIcon = styled(ArrowUpRight).attrs<Props>(({ theme, isGoodDiet }) => ({
   size: 24,
   color: isGoodDiet  ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK,
 }))<Props>``;
 
+export const ArrowButton = styled.View`
+  position: absolute;
+  top: -30px;
+  right: -110px;
+`;
 
 export const FirsRow = styled.View`
   flex-direction: row;
@@ -47,10 +52,4 @@ export const Title = styled.Text`
         font-family: ${theme.FONT_FAMILY.REGULAR};
         color: ${theme.COLORS.GRAY_2};
     `}
-`;
-
-export const ArrowButton = styled.View`
-  position: absolute;
-  top: 0;
-  right: 0;
 `;

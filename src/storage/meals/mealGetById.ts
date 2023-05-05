@@ -5,7 +5,6 @@ import { MealDay, MealItem } from 'src/@types/meals';
 export async function mealGetById(id: number): Promise<MealItem | null> {
   try {
     const storageData = await AsyncStorage.getItem(MEALS_COLLECTION);
-
     const meals: MealDay[] = storageData ? JSON.parse(storageData) : [];
     let mealI: MealItem | null = null;
 

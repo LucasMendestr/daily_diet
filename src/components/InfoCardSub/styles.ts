@@ -25,7 +25,6 @@ export const Container = styled(TouchableOpacity)<Props>`
   flex: 1;
 `;
 
-
 export const Title = styled.Text`
   ${({ theme }) => css`
       font-size: ${theme.FONT_SIZE.TMB}px;

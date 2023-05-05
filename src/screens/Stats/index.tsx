@@ -12,45 +12,48 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { InfoCardSub } from "@components/InfoCardSub";
 
 type RouteParams = {
-    isGoodDietS: boolean;
+    isGoodDiet: boolean;
+    totalTrue: number;
+    totalFalse: number; 
+    bestSequence: number
 }
 
 export function Stats() {
     const route = useRoute();
-    const { isGoodDietS } = route.params as RouteParams;
-    const isGoodDiet = isGoodDietS;
+    const { isGoodDiet, totalTrue, totalFalse, bestSequence } = route.params as RouteParams;
     const navigation = useNavigation();
+
     function handleHome() {
-    navigation.navigate('home');
-  }
+        navigation.navigate('home');
+    }
 
     return (
         <Container isGoodDiet={isGoodDiet}>
             <HeaderA>
                 <ButtonIcon onPress={handleHome}>
-                    <ArrowIcon isGoodDiet/>
+                    <ArrowIcon isGoodDiet={isGoodDiet}/>
                 </ButtonIcon>
-                <Percent>98%</Percent>
+                <Percent>{(totalTrue/(totalTrue+totalFalse)).toLocaleString('pt-BR', { style: 'percent' })}</Percent>
                 <SubTitle>das refeições dentro da dieta</SubTitle>
             </HeaderA>
             <Body>
                 <Title>Estatísticas gerais</Title>
                 <InfoCard 
-                    title={"22"} 
+                    title={bestSequence.toString()}
                     subTitle={"melhor sequência de pratos dentro da dieta"} 
                 />
                 <InfoCard 
-                    title={"109"} 
+                    title={(totalTrue+totalFalse).toString()} 
                     subTitle={"refeições registradas"} 
                 />
                 <BodyRow>
                     <InfoCardSub 
-                        title={"90"} 
+                        title={totalTrue.toString()} 
                         subTitle={"refeições dentro da dieta"} 
                         color={"GREEN"} 
                     />
                     <InfoCardSub 
-                        title={"10"} 
+                        title={totalFalse.toString()} 
                         subTitle={"refeições fora da dieta"} 
                         color={"RED"} 
                     />

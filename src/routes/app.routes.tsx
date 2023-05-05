@@ -6,7 +6,6 @@ import { MealView } from '@screens/MealView';
 import { NewMeal } from '@screens/NewMeal';
 import { Stats } from '@screens/Stats';
 
-
 const { Navigator, Screen } = createNativeStackNavigator();
 
 export function AppRoutes(){
@@ -16,27 +15,22 @@ export function AppRoutes(){
         name="home"
         component={Home}
       />
-
       <Screen 
         name="stats"
         component={Stats}
       />
-
       <Screen 
         name="newMeal"
         component={NewMeal}
       />
-
       <Screen 
         name="confirmationView"
         component={ConfirmationView}
       />
-
       <Screen
         name="mealView"
         component={MealView}
       />      
-
     </Navigator>
   );
 }
