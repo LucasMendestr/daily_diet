@@ -10,7 +10,7 @@ export const Container = styled(SafeAreaView)`
 export const Title = styled.Text`
     margin-top: 40px;
     ${({ theme }) => css`
-        font-size: ${theme.FONT_SIZE.BM}px;
+        font-size: ${theme.FONT_SIZE.BMR}px;
         font-family: ${theme.FONT_FAMILY.REGULAR};
         color: ${theme.COLORS.GRAY_1};
     `}
@@ -18,7 +18,7 @@ export const Title = styled.Text`
 
 export const TileHeader = styled.Text`
       ${({ theme }) => css`
-        font-size: ${theme.FONT_SIZE.BM}px;
+        font-size: ${theme.FONT_SIZE.BMR}px;
         font-family: ${theme.FONT_FAMILY.REGULAR};
         color: ${theme.COLORS.GRAY_2};
     `}

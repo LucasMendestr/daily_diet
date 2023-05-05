@@ -4,11 +4,12 @@ import { TouchableOpacityProps } from "react-native";
 type Props = TouchableOpacityProps & {
     title: string;
     subTitle: string;
+    color: string;
 }
 
-export function InfoCard({ title, subTitle, ...rest }: Props) {
+export function InfoCardSub({ title, subTitle, color, ...rest }: Props) {
   return (
-    <Container>
+    <Container color={color}>
         <Title>{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
     </Container>

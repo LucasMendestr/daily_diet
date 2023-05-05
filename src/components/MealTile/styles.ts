@@ -29,15 +29,15 @@ export const Circle = styled(View)<Props>`
 
 export const Hour = styled.Text`
   ${({ theme }) => css`
-      font-size: ${theme.FONT_SIZE.BXS}px;
+      font-size: ${theme.FONT_SIZE.BXSB}px;
       color: ${theme.COLORS.GRAY_1};
-      font-family: ${theme.FONT_FAMILY.REGULAR};
+      font-family: ${theme.FONT_FAMILY.BOLD};
   `};
 `;
 
 export const Title = styled.Text`
   ${({ theme }) => css`
-      font-size: ${theme.FONT_SIZE.BM}px;
+      font-size: ${theme.FONT_SIZE.BMR}px;
       color: ${theme.COLORS.GRAY_2};
       font-family: ${theme.FONT_FAMILY.REGULAR};
   `};

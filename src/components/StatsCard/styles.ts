@@ -34,7 +34,7 @@ export const PerctText = styled.Text`
     justify-content: center;
     text-align: center;
     ${({ theme }) => css`
-        font-size: ${theme.FONT_SIZE.TG}px;
+        font-size: ${theme.FONT_SIZE.TGB}px;
         font-family: ${theme.FONT_FAMILY.BOLD};
         color: ${theme.COLORS.GRAY_1};
     `}
@@ -43,7 +43,7 @@ export const PerctText = styled.Text`
 export const Title = styled.Text`
     text-align: center;
     ${({ theme }) => css`
-        font-size: ${theme.FONT_SIZE.BS}px;
+        font-size: ${theme.FONT_SIZE.BSR}px;
         font-family: ${theme.FONT_FAMILY.REGULAR};
         color: ${theme.COLORS.GRAY_2};
     `}
